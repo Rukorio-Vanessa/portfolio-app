@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_05_190755) do
+ActiveRecord::Schema.define(version: 2023_03_05_192848) do
+
+  create_table "projects", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "title", null: false
+    t.string "description"
+    t.string "current_state", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
@@ -18,4 +27,5 @@ ActiveRecord::Schema.define(version: 2023_03_05_190755) do
     t.string "password", null: false
   end
 
+  add_foreign_key "projects", "users"
 end
