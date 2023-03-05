@@ -21,6 +21,9 @@ gem 'rack-contrib', '~> 2.3'
 
 gem 'require_all', '~> 3.0'
 
+gem 'bcrypt', '~> 3.1', '>= 3.1.18'
+
+
 group :development do
 
   gem "faker", "~> 2.18"
