@@ -17,6 +17,21 @@ user3 = User.create(
 )
 
 
+rand(1..7).times do
+    Project.create(
+    "title": Faker::Marketing.buzzwords,
+    "description": Faker::Lorem.sentence,
+    "user_id": user.id,
+    "createdAt": rand(3..4)
+    )
+end
 
+rand(1..5).times do
+    Skill.create(
+    "name": Faker::Job.key_skill,
+    "user_id": user.id,
+    )
+end
+end
 
 puts "Done seeding!"
