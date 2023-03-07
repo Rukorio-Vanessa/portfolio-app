@@ -71,6 +71,27 @@ Database schema definitions.
 
 #### PROJECTS
 
+| COLUMN      | DATA TYPE                                       | DESCRIPTION                         | 
+|-------------|-------------------------------------------------|-------------------------------------|
+| id          | Integer                                         | Unique identifier.                  |
+| title       | String                                          | The title of the project.           |
+| description | String                                          | A short description of the project. |
+
+
+#### USER
+| COLUMN        | DATA TYPE | DESCRIPTION                           | 
+|---------------|-----------|---------------------------------------|
+| id            | Integer   | Unique identifier.                    |
+| username      | String    | User's user name.                     |
+| email         | String    | User's email address.                 |
+| password_hash | String    | User's password hashed with `BCrypt`. |
+
+
+#### SKILLS
+| COLUMN      | DATA TYPE                                       | DESCRIPTION                         | 
+|-------------|-------------------------------------------------|-------------------------------------|
+| id          | Integer                                         | Unique identifier.                  |
+| name        | String                                          | The name of the skill.              |
 
 
 
