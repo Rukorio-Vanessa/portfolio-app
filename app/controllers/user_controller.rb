@@ -23,18 +23,14 @@ class UserController < Sinatra::Base
       
     
     post '/auth/login' do
-        begin
         user_data = User.find_by(email: params[:email])
         
         if user_data && user_data.authenticate(params[:password])
           json_response(code: 200, data: {id: user_data.id, email: user_data.email})
         else
           json_response(code: 422, data: {message: 'wrong email  or password input!'})
-        rescue => e
-            error_response(422, e)
         end
     end
-      
       
 
     get '/user' do
@@ -46,7 +42,9 @@ class UserController < Sinatra::Base
 
     #private func to parse json data for the user
     private
+
     def user_data
       JSON.parse(request.body.read)
     end
+    
 end
