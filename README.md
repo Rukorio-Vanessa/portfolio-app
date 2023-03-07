@@ -66,6 +66,13 @@ This application is a simple web API that allows users to:
 - Perform all CRUD methods on projects
 - Perform all CRUD methods on projects
 
+Overall, the relationships between the tables can be summarized as follows:
+
+- A user can have many projects.
+- A project belongs to one user.
+- A user can have many skills.
+- A skill belongs to one user.
+
 ### MODELS
 Database schema definitions.
 
