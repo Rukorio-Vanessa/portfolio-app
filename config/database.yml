@@ -8,4 +8,4 @@ development:
 
 production:
    <<: *default
-   database: db/portfolio-prod.db
+   database: db/portfolio-prod.sqlite3
